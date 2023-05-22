@@ -10,12 +10,11 @@ let clickButton = (event) => {
 }
 buttons.forEach(button => button.addEventListener('click', clickButton))
 let doClearDisplay = () => answer.value = '';
-let clearValue = () => {
-    let answer = document.getElementById('answer').value
-    document.getElementById('answer').value = answer.substring(0, answer.length-1)
+let resetToZero = () => {
+    answer.value = 0
 }
 let getAnswer = () => answer.value = eval(answer.value);
 ac.addEventListener('click', doClearDisplay)
-clear.addEventListener('click', clearValue)
+clear.addEventListener('click', resetToZero)
 equal.addEventListener('click', getAnswer)
 
